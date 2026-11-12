@@ -18,7 +18,22 @@
 .routes{min-width:0}.plan-controls{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 22px}.plan-choice{padding:10px 14px;border-radius:16px;min-height:48px;font-size:14px;flex:1 1 190px}.plan-choice[aria-pressed=true]{background:var(--yellow);box-shadow:3px 3px 0 var(--ink)}.route-title{margin:0 0 8px;font-weight:400;font-size:21px}.route-note{padding:12px 15px;border-radius:15px;background:#FFF2D1;font-size:14px;margin:0 0 25px}.side-note .side-heading{margin-top:24px}.meal{border-top:2px dashed #B9C3A6;padding:12px 0}.meal h5{font-weight:400;font-size:15px;margin:0 0 7px}.meal p{font-size:13px;color:var(--muted)}.sources{margin-top:18px;font-size:13px}.sources summary{cursor:pointer;min-height:44px;padding:9px 0}.source-link{display:block;padding:8px 0;overflow-wrap:anywhere}.day-content{grid-template-columns:minmax(0,1.7fr) minmax(0,1fr)}
 @media(max-width:760px){.day-content{grid-template-columns:1fr}.plan-choice{flex-basis:100%;font-size:14px}.route-title{font-size:19px}}
 @media print{.plan-controls{display:none!important}.day-panel{break-inside:auto}.day-content{display:block}.side-note{margin-top:20px}.event{break-inside:avoid}.route-plan[hidden]{display:none!important}.sources{display:none}.route-title{font-size:18px}}
-.kiyomizu-photos{margin-top:28px;padding-top:20px;border-top:3px solid #3E3A39}.kiyomizu-photos h4{font-size:1.4rem;margin:0 0 10px}.photo-grid{display:grid;grid-template-columns:1fr;gap:20px;margin-top:16px}.photo-grid figure{margin:0;border:3px solid #3E3A39;border-radius:24px;overflow:hidden;background:#FFFCF6;break-inside:avoid}.photo-grid img{display:block;width:100%;height:auto}.photo-grid figcaption{padding:16px}.photo-grid strong{font-size:1.2rem}.photo-grid p{margin:8px 0 0}.kiyomizu-photos{min-width:0}@media print{.photo-grid{grid-template-columns:1fr 1fr}.photo-grid img{max-height:240px;object-fit:contain}}</style>
+.kiyomizu-photos{margin-top:28px;padding-top:20px;border-top:3px solid #3E3A39}.kiyomizu-photos h4{font-size:1.4rem;margin:0 0 10px}.photo-grid{display:grid;grid-template-columns:1fr;gap:20px;margin-top:16px}.photo-grid figure{margin:0;border:3px solid #3E3A39;border-radius:24px;overflow:hidden;background:#FFFCF6;break-inside:avoid}.photo-grid img{display:block;width:100%;height:auto}.photo-grid figcaption{padding:16px}.photo-grid strong{font-size:1.2rem}.photo-grid p{margin:8px 0 0}.kiyomizu-photos{min-width:0}@media print{.photo-grid{grid-template-columns:1fr 1fr}.photo-grid img{max-height:240px;object-fit:contain}}
+/* Kyoto weather journal */
+.weather-shell{border:var(--line);border-radius:26px;overflow:hidden;background:#F4F8EF}
+.weather-top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px;background:#E6F2F6;border-bottom:var(--line)}
+.weather-current{min-width:0}.weather-current h3{font-size:22px}.weather-now-value{font-size:30px;line-height:1.5;margin:8px 0}.weather-meta{font-size:13px;color:var(--muted)}
+.weather-actions{flex-shrink:0}.weather-actions button{background:var(--yellow)}.weather-actions button:disabled{opacity:.6;cursor:wait}
+.weather-body{padding:24px}.weather-days{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:18px 0}
+.weather-day{min-width:0;background:var(--paper);border:2px solid var(--ink);border-radius:19px;overflow:hidden;break-inside:avoid}
+.weather-date{padding:12px 14px;background:#FBE8E1;border-bottom:2px solid var(--ink)}.weather-date h3{font-size:22px}.weather-date p{font-size:12px}
+.weather-details{padding:16px 14px}.weather-condition{font-size:17px;min-height:30px}.weather-temp{font-size:23px;margin:6px 0}.weather-rain{font-size:13px;color:var(--muted)}
+.weather-sun{border-top:2px dashed #D5CEC3;padding-top:12px;margin-top:14px;display:grid;gap:5px;font-size:15px}.weather-sun span{display:flex;justify-content:space-between;gap:5px}.weather-sun strong{font-weight:400;font-variant-numeric:tabular-nums}.weather-help{font-size:13px;color:var(--muted)}.weather-status{font-size:14px}.weather-source{margin-top:14px;font-size:12px}.weather-mini{display:block;margin-top:13px;font-size:13px}
+@media(max-width:900px){.weather-days{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.weather-top{padding:20px;align-items:flex-start;flex-wrap:wrap;gap:12px}.weather-body{padding:18px}.weather-now-value{font-size:27px}.weather-details{padding:14px 12px}.weather-temp{font-size:20px}.weather-days{gap:10px}.weather-date{padding:10px 12px}}
+@media(max-width:380px){.weather-days{grid-template-columns:1fr}.weather-condition{min-height:0}.weather-sun{grid-template-columns:1fr 1fr;gap:16px}}
+@media print{.weather-actions{display:none}.weather-shell{background:white}.weather-days{grid-template-columns:repeat(2,minmax(0,1fr))}.weather-top,.weather-day{break-inside:avoid}.weather-mini{display:none}}
+</style>
 </head>
 <body>
 <!-- All illustrations are inline, original SVG. No image downloads are required. -->
@@ -32,7 +47,7 @@
 <symbol id="plane" viewBox="0 0 90 50"><path d="M5 29h19L46 5h9l-9 24h25q17 0 14 7H45l9 11h-9L29 36H14Z" fill="#FFFCF6" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/></symbol>
 <symbol id="bus" viewBox="0 0 120 100"><g stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"><rect x="9" y="22" width="102" height="57" rx="12" fill="#A8D3E6"/><path d="M15 32h22v24H15Zm30 0h23v24H45Zm31 0h25v24H76Z" fill="#FFFCF6"/><path d="M9 64h102M85 64v15"/><circle cx="31" cy="80" r="10" fill="#FFFCF6"/><circle cx="91" cy="80" r="10" fill="#FFFCF6"/><circle cx="31" cy="80" r="3" fill="#F6D27A"/><circle cx="91" cy="80" r="3" fill="#F6D27A"/><path d="m49 15 8-6h18" fill="none"/></g></symbol></defs></svg>
 <a class="skip" href="#itinerary">跳至每日行程</a>
-<header class="nav"><div class="wrap nav-inner"><a class="brand" href="#home"><svg aria-hidden="true"><use href="#leaf"/></svg>京都小旅行</a><nav class="nav-links" aria-label="主要選單"><a href="#itinerary">每日行程</a><a href="#flights">航班</a><a href="#stays">住宿</a><a href="#prepare">出發準備</a><a href="#packing">行李</a></nav></div></header>
+<header class="nav"><div class="wrap nav-inner"><a class="brand" href="#home"><svg aria-hidden="true"><use href="#leaf"/></svg>京都小旅行</a><nav class="nav-links" aria-label="主要選單"><a href="#itinerary">每日行程</a><a href="#flights">航班</a><a href="#weather">天氣</a><a href="#stays">住宿</a><a href="#prepare">出發準備</a><a href="#packing">行李</a></nav></div></header>
 <main id="home">
 <section class="hero wrap" aria-labelledby="hero-title">
 <div class="hero-top"><p class="eyebrow">OUR LITTLE TRAVEL JOURNAL / 秋日旅遊手帖</p><span class="stamp">四天・三夜</span></div>
@@ -63,6 +78,14 @@
 <section id="flights" class="section wrap" aria-labelledby="flights-title"><div class="section-head"><div class="section-title"><span class="number blue">01</span><h2 id="flights-title">飛向秋天的京都</h2></div><span class="section-note">航班時間皆為出發／抵達地當地時間</span></div><div class="cards">
 <article class="card"><div class="card-header blue"><h3>去程 · 11 / 30（一）</h3><span class="tag">華航 CI 0166</span></div><div class="flight-body"><div class="flight-route"><div class="airport"><strong>07:00</strong><span>高雄 KHH</span><small>台灣時間 UTC+8</small></div><svg aria-hidden="true" viewBox="0 0 90 50"><use href="#plane"/></svg><div class="airport"><strong>10:45</strong><span>關西 KIX・T1</span><small>日本時間 UTC+9</small></div></div><div class="flight-footer"><span>飛行約 2 小時 45 分</span><span>經濟艙・基本（N）</span></div></div></article>
 <article class="card"><div class="card-header pink"><h3>回程 · 12 / 03（四）</h3><span class="tag">華航 CI 0177</span></div><div class="flight-body"><div class="flight-route"><div class="airport"><strong>20:10</strong><span>關西 KIX・T1</span><small>日本時間 UTC+9</small></div><svg aria-hidden="true" viewBox="0 0 90 50"><use href="#plane"/></svg><div class="airport"><strong>22:45</strong><span>高雄 KHH</span><small>台灣時間 UTC+8</small></div></div><div class="flight-footer"><span>飛行約 3 小時 35 分</span><span>經濟艙・基本（N）</span></div></div></article></div><p class="note">航班號依妳提供：中華航空去程CI 0166、回程CI 0177。關西機場官方航空公司名單列華航使用第一航廈（T1）；回程巴士在T1下車，不用去T2。日期與時間沿用妳的行程，實際以機票及當日通知為準。<a href="https://www.kansai-airport.or.jp/en/flight/airlines" target="_blank" rel="noopener noreferrer">關西機場官方航空公司資訊 ↗</a></p></section>
+<section id="weather" class="section wrap" aria-labelledby="weather-title">
+<div class="section-head"><div class="section-title"><span class="number yellow" aria-hidden="true">☀</span><h2 id="weather-title">把晴雨，也放進手帖</h2></div><span class="section-note">京都市中心・全部為日本時間（台灣＋1小時）</span></div>
+<div class="weather-shell"><div class="weather-top"><div class="weather-current"><p class="eyebrow">KYOTO WEATHER</p><h3>京都現在</h3><p id="weather-now" class="weather-now-value">正在讀取氣溫…</p><p id="weather-now-time" class="weather-meta">目前天氣為氣象模式估計，不是旅遊當天的預報。</p></div><div class="weather-actions"><button type="button" class="small-button" id="weather-refresh">更新天氣 ↻</button></div></div>
+<div class="weather-body"><p id="weather-status" class="weather-status" role="status" aria-live="polite">正在查詢四天的天氣預報…</p><div id="weather-days" class="weather-days"></div>
+<p class="note">氣溫顯示每日最低～最高，降雨機率取當日最高值。日出／日落為京都市中心的天文推算（約值），不是晴天保證；山勢、建築與雲層會影響實際見到陽光的時間。嵐山、亀岡的氣溫可能與市區不同。<br>12／2若06:30先到清水寺，仍在日出前，請保暖並留意腳下。</p>
+<p class="weather-source">天氣來源：<a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo（CC BY 4.0）</a>；日出日落：<a href="https://github.com/mourner/suncalc" target="_blank" rel="noopener noreferrer">SunCalc 天文推算</a>。開啟頁面或按「更新天氣」時查詢，需網路連線。遠期預報仍可能變動，出發前請再看一次。</p>
+<noscript><p class="note">開啟 JavaScript 後可讀取天氣與日出日落。旅行期間日出約06:46～06:49，日落約16:46～16:47（日本時間）。</p></noscript>
+</div></div></section>
 <section id="itinerary" class="section wrap" aria-labelledby="itinerary-title"><div class="section-head"><div class="section-title"><span class="number pink">02</span><h2 id="itinerary-title">一天一頁，慢慢旅行</h2></div><span class="section-note">京都行程為日本時間・航班另標當地時間・交通為估計</span></div><div class="days" role="tablist" aria-label="選擇旅遊日期" id="day-tabs"></div><div id="day-panels"></div><noscript><p class="note">請開啟 JavaScript 以顯示每日時間軸與清單。行程摘要：11／30泡湯與清水寺夜楓；12／1購物或嵐山＋金閣寺；12／2和服麗、Haru外拍與清水寺；12／3購物、15:20巴士去機場。</p></noscript></section>
 <section id="stays" class="section wrap" aria-labelledby="stays-title"><div class="section-head"><div class="section-title"><span class="number green">03</span><h2 id="stays-title">今晚，好好休息</h2></div><span class="section-note">一晚溫泉・兩晚京都站旁</span></div><div class="cards">
 <article class="card"><svg class="hotel-art alt" viewBox="0 0 400 130" role="img" aria-label="日式溫泉旅館插圖"><g stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"><path d="M82 111V56h220v55Z" fill="#FFFCF6"/><path d="M67 56 109 22h166l44 34Z" fill="#B9DAA5"/><path d="M158 111V64h70v47" fill="#F2A497"/><path d="M158 83h70m-35-19v47"/><path d="M102 72h36v23h-36Zm146 0h36v23h-36Z" fill="#F6D27A"/><path d="M64 114h273" fill="none"/></g><use href="#onsen" x="320" y="52" width="65" height="65"/></svg><div class="hotel-body"><span class="tag green">11 / 30 入住 → 12 / 01 退房</span><h3>京都 梅小路 花傳抄</h3><p>先寄行李，15:00起入住泡湯，晚上看清水寺夜楓。JR「梅小路京都西站」旁，京都站搭普通車一站可達。</p><div class="tags"><span class="tag">天然溫泉</span><span class="tag">貸切浴池</span><span class="tag yellow">純住宿・不含早晚餐</span></div><p class="note">已確認預訂純住宿，不含晚餐，也不含隔日早餐。11／30晚餐外食；12／1早餐自備或附近用餐。貸切湯規則到店詢問。12／1若走Plan B，要先確認退房後可寄行李至傍晚。不是「嵐山花傳抄」。</p><div class="links" style="margin-top:15px"><a class="button-link" target="_blank" rel="noopener noreferrer" href="https://dormy-hotels.com/resort/hotels/umekoji_kadensho/">旅館官網 ↗</a><a class="button-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=京都+梅小路+花伝抄">開啟地圖 ↗</a></div></div></article>
@@ -915,6 +938,407 @@ updateProgress();const notes=document.getElementById('travel-notes');notes.value
 const motion=document.getElementById('motion-toggle'),systemMotion=window.matchMedia('(prefers-reduced-motion: reduce)');function applyMotion(){document.documentElement.classList.toggle('reduce-motion',state.motion||systemMotion.matches);motion.checked=state.motion||systemMotion.matches;motion.disabled=systemMotion.matches;motion.parentElement.title=systemMotion.matches?'已依裝置設定減少動態效果':'';}motion.addEventListener('change',()=>{state.motion=motion.checked;applyMotion();save();});if(systemMotion.addEventListener)systemMotion.addEventListener('change',applyMotion);applyMotion();
 const departure=new Date('2026-11-30T07:00:00+08:00'),returnTime=new Date('2026-12-03T22:45:00+08:00');function updateCountdown(){const now=new Date();let value,unit,title,note;if(now<departure){value=Math.ceil((departure-now)/86400000);unit='天';title='距離出發還有';note='一起把期待，裝進行李箱。';}else if(now<=returnTime){value='旅行';unit='中';title='我們正在收藏回憶';note='今天也一起慢慢走。';}else{value='已';unit='返家';title='旅行結束，回憶留下';note='把喜歡的風景，留在心裡。';}document.getElementById('count-number').textContent=value;document.getElementById('count-unit').textContent=unit;document.getElementById('count-title').textContent=title;document.getElementById('count-note').textContent=note;}updateCountdown();setInterval(updateCountdown,60000);save();
 document.getElementById('print-button').addEventListener('click',()=>window.print());document.getElementById('export-button').addEventListener('click',()=>{const lines=['和媽媽的京都小旅行｜2026.11.30–12.03','清單與筆記備份',''];Object.entries(groups).forEach(([id,g])=>{lines.push('【'+g.title+'】');g.items.forEach((t,i)=>lines.push((state.checks[id+'-'+i]?'☑ ':'☐ ')+t));lines.push('');});itinerary.forEach((d,i)=>{lines.push('【'+d.date+' 今日待辦】');d.tasks.forEach((t,j)=>lines.push((state.checks['day'+i+'-'+j]?'☑ ':'☐ ')+t));});itinerary.forEach((d,i)=>{const p=d.variants?d.variants[state.plans[i]]||d.variants[0]:{label:'今日路線',events:d.events};lines.push('','【'+d.date+' '+p.label+'】');p.events.forEach(e=>lines.push(e[0]+'｜'+e[1]+'\n'+e[2]));});lines.push('','【旅途筆記】',state.note||'（尚未填寫）');const blob=new Blob(['\uFEFF'+lines.join('\n')],{type:'text/plain;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='京都旅行清單與筆記.txt';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),10000);});
+</script>
+<script>
+/*
+Copyright (c) 2014, Vladimir Agafonkin
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are
+permitted provided that the following conditions are met:
+
+   1. Redistributions of source code must retain the above copyright notice, this list of
+      conditions and the following disclaimer.
+
+   2. Redistributions in binary form must reproduce the above copyright notice, this list
+      of conditions and the following disclaimer in the documentation and/or other materials
+      provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+*/
+/*
+ (c) 2011-2015, Vladimir Agafonkin
+ SunCalc is a JavaScript library for calculating sun/moon position and light phases.
+ https://github.com/mourner/suncalc
+*/
+
+(function () { 'use strict';
+
+// shortcuts for easier to read formulas
+
+var PI   = Math.PI,
+    sin  = Math.sin,
+    cos  = Math.cos,
+    tan  = Math.tan,
+    asin = Math.asin,
+    atan = Math.atan2,
+    acos = Math.acos,
+    rad  = PI / 180;
+
+// sun calculations are based on http://aa.quae.nl/en/reken/zonpositie.html formulas
+
+
+// date/time constants and conversions
+
+var dayMs = 1000 * 60 * 60 * 24,
+    J1970 = 2440588,
+    J2000 = 2451545;
+
+function toJulian(date) { return date.valueOf() / dayMs - 0.5 + J1970; }
+function fromJulian(j)  { return new Date((j + 0.5 - J1970) * dayMs); }
+function toDays(date)   { return toJulian(date) - J2000; }
+
+
+// general calculations for position
+
+var e = rad * 23.4397; // obliquity of the Earth
+
+function rightAscension(l, b) { return atan(sin(l) * cos(e) - tan(b) * sin(e), cos(l)); }
+function declination(l, b)    { return asin(sin(b) * cos(e) + cos(b) * sin(e) * sin(l)); }
+
+function azimuth(H, phi, dec)  { return atan(sin(H), cos(H) * sin(phi) - tan(dec) * cos(phi)); }
+function altitude(H, phi, dec) { return asin(sin(phi) * sin(dec) + cos(phi) * cos(dec) * cos(H)); }
+
+function siderealTime(d, lw) { return rad * (280.16 + 360.9856235 * d) - lw; }
+
+function astroRefraction(h) {
+    if (h < 0) // the following formula works for positive altitudes only.
+        h = 0; // if h = -0.08901179 a div/0 would occur.
+
+    // formula 16.4 of "Astronomical Algorithms" 2nd edition by Jean Meeus (Willmann-Bell, Richmond) 1998.
+    // 1.02 / tan(h + 10.26 / (h + 5.10)) h in degrees, result in arc minutes -> converted to rad:
+    return 0.0002967 / Math.tan(h + 0.00312536 / (h + 0.08901179));
+}
+
+// general sun calculations
+
+function solarMeanAnomaly(d) { return rad * (357.5291 + 0.98560028 * d); }
+
+function eclipticLongitude(M) {
+
+    var C = rad * (1.9148 * sin(M) + 0.02 * sin(2 * M) + 0.0003 * sin(3 * M)), // equation of center
+        P = rad * 102.9372; // perihelion of the Earth
+
+    return M + C + P + PI;
+}
+
+function sunCoords(d) {
+
+    var M = solarMeanAnomaly(d),
+        L = eclipticLongitude(M);
+
+    return {
+        dec: declination(L, 0),
+        ra: rightAscension(L, 0)
+    };
+}
+
+
+var SunCalc = {};
+
+
+// calculates sun position for a given date and latitude/longitude
+
+SunCalc.getPosition = function (date, lat, lng) {
+
+    var lw  = rad * -lng,
+        phi = rad * lat,
+        d   = toDays(date),
+
+        c  = sunCoords(d),
+        H  = siderealTime(d, lw) - c.ra;
+
+    return {
+        azimuth: azimuth(H, phi, c.dec),
+        altitude: altitude(H, phi, c.dec)
+    };
+};
+
+
+// sun times configuration (angle, morning name, evening name)
+
+var times = SunCalc.times = [
+    [-0.833, 'sunrise',       'sunset'      ],
+    [  -0.3, 'sunriseEnd',    'sunsetStart' ],
+    [    -6, 'dawn',          'dusk'        ],
+    [   -12, 'nauticalDawn',  'nauticalDusk'],
+    [   -18, 'nightEnd',      'night'       ],
+    [     6, 'goldenHourEnd', 'goldenHour'  ]
+];
+
+// adds a custom time to the times config
+
+SunCalc.addTime = function (angle, riseName, setName) {
+    times.push([angle, riseName, setName]);
+};
+
+
+// calculations for sun times
+
+var J0 = 0.0009;
+
+function julianCycle(d, lw) { return Math.round(d - J0 - lw / (2 * PI)); }
+
+function approxTransit(Ht, lw, n) { return J0 + (Ht + lw) / (2 * PI) + n; }
+function solarTransitJ(ds, M, L)  { return J2000 + ds + 0.0053 * sin(M) - 0.0069 * sin(2 * L); }
+
+function hourAngle(h, phi, d) { return acos((sin(h) - sin(phi) * sin(d)) / (cos(phi) * cos(d))); }
+function observerAngle(height) { return -2.076 * Math.sqrt(height) / 60; }
+
+// returns set time for the given sun altitude
+function getSetJ(h, lw, phi, dec, n, M, L) {
+
+    var w = hourAngle(h, phi, dec),
+        a = approxTransit(w, lw, n);
+    return solarTransitJ(a, M, L);
+}
+
+
+// calculates sun times for a given date, latitude/longitude, and, optionally,
+// the observer height (in meters) relative to the horizon
+
+SunCalc.getTimes = function (date, lat, lng, height) {
+
+    height = height || 0;
+
+    var lw = rad * -lng,
+        phi = rad * lat,
+
+        dh = observerAngle(height),
+
+        d = toDays(date),
+        n = julianCycle(d, lw),
+        ds = approxTransit(0, lw, n),
+
+        M = solarMeanAnomaly(ds),
+        L = eclipticLongitude(M),
+        dec = declination(L, 0),
+
+        Jnoon = solarTransitJ(ds, M, L),
+
+        i, len, time, h0, Jset, Jrise;
+
+
+    var result = {
+        solarNoon: fromJulian(Jnoon),
+        nadir: fromJulian(Jnoon - 0.5)
+    };
+
+    for (i = 0, len = times.length; i < len; i += 1) {
+        time = times[i];
+        h0 = (time[0] + dh) * rad;
+
+        Jset = getSetJ(h0, lw, phi, dec, n, M, L);
+        Jrise = Jnoon - (Jset - Jnoon);
+
+        result[time[1]] = fromJulian(Jrise);
+        result[time[2]] = fromJulian(Jset);
+    }
+
+    return result;
+};
+
+
+// moon calculations, based on http://aa.quae.nl/en/reken/hemelpositie.html formulas
+
+function moonCoords(d) { // geocentric ecliptic coordinates of the moon
+
+    var L = rad * (218.316 + 13.176396 * d), // ecliptic longitude
+        M = rad * (134.963 + 13.064993 * d), // mean anomaly
+        F = rad * (93.272 + 13.229350 * d),  // mean distance
+
+        l  = L + rad * 6.289 * sin(M), // longitude
+        b  = rad * 5.128 * sin(F),     // latitude
+        dt = 385001 - 20905 * cos(M);  // distance to the moon in km
+
+    return {
+        ra: rightAscension(l, b),
+        dec: declination(l, b),
+        dist: dt
+    };
+}
+
+SunCalc.getMoonPosition = function (date, lat, lng) {
+
+    var lw  = rad * -lng,
+        phi = rad * lat,
+        d   = toDays(date),
+
+        c = moonCoords(d),
+        H = siderealTime(d, lw) - c.ra,
+        h = altitude(H, phi, c.dec),
+        // formula 14.1 of "Astronomical Algorithms" 2nd edition by Jean Meeus (Willmann-Bell, Richmond) 1998.
+        pa = atan(sin(H), tan(phi) * cos(c.dec) - sin(c.dec) * cos(H));
+
+    h = h + astroRefraction(h); // altitude correction for refraction
+
+    return {
+        azimuth: azimuth(H, phi, c.dec),
+        altitude: h,
+        distance: c.dist,
+        parallacticAngle: pa
+    };
+};
+
+
+// calculations for illumination parameters of the moon,
+// based on http://idlastro.gsfc.nasa.gov/ftp/pro/astro/mphase.pro formulas and
+// Chapter 48 of "Astronomical Algorithms" 2nd edition by Jean Meeus (Willmann-Bell, Richmond) 1998.
+
+SunCalc.getMoonIllumination = function (date) {
+
+    var d = toDays(date || new Date()),
+        s = sunCoords(d),
+        m = moonCoords(d),
+
+        sdist = 149598000, // distance from Earth to Sun in km
+
+        phi = acos(sin(s.dec) * sin(m.dec) + cos(s.dec) * cos(m.dec) * cos(s.ra - m.ra)),
+        inc = atan(sdist * sin(phi), m.dist - sdist * cos(phi)),
+        angle = atan(cos(s.dec) * sin(s.ra - m.ra), sin(s.dec) * cos(m.dec) -
+                cos(s.dec) * sin(m.dec) * cos(s.ra - m.ra));
+
+    return {
+        fraction: (1 + cos(inc)) / 2,
+        phase: 0.5 + 0.5 * inc * (angle < 0 ? -1 : 1) / Math.PI,
+        angle: angle
+    };
+};
+
+
+function hoursLater(date, h) {
+    return new Date(date.valueOf() + h * dayMs / 24);
+}
+
+// calculations for moon rise/set times are based on http://www.stargazing.net/kepler/moonrise.html article
+
+SunCalc.getMoonTimes = function (date, lat, lng, inUTC) {
+    var t = new Date(date);
+    if (inUTC) t.setUTCHours(0, 0, 0, 0);
+    else t.setHours(0, 0, 0, 0);
+
+    var hc = 0.133 * rad,
+        h0 = SunCalc.getMoonPosition(t, lat, lng).altitude - hc,
+        h1, h2, rise, set, a, b, xe, ye, d, roots, x1, x2, dx;
+
+    // go in 2-hour chunks, each time seeing if a 3-point quadratic curve crosses zero (which means rise or set)
+    for (var i = 1; i <= 24; i += 2) {
+        h1 = SunCalc.getMoonPosition(hoursLater(t, i), lat, lng).altitude - hc;
+        h2 = SunCalc.getMoonPosition(hoursLater(t, i + 1), lat, lng).altitude - hc;
+
+        a = (h0 + h2) / 2 - h1;
+        b = (h2 - h0) / 2;
+        xe = -b / (2 * a);
+        ye = (a * xe + b) * xe + h1;
+        d = b * b - 4 * a * h1;
+        roots = 0;
+
+        if (d >= 0) {
+            dx = Math.sqrt(d) / (Math.abs(a) * 2);
+            x1 = xe - dx;
+            x2 = xe + dx;
+            if (Math.abs(x1) <= 1) roots++;
+            if (Math.abs(x2) <= 1) roots++;
+            if (x1 < -1) x1 = x2;
+        }
+
+        if (roots === 1) {
+            if (h0 < 0) rise = i + x1;
+            else set = i + x1;
+
+        } else if (roots === 2) {
+            rise = i + (ye < 0 ? x2 : x1);
+            set = i + (ye < 0 ? x1 : x2);
+        }
+
+        if (rise && set) break;
+
+        h0 = h2;
+    }
+
+    var result = {};
+
+    if (rise) result.rise = hoursLater(t, rise);
+    if (set) result.set = hoursLater(t, set);
+
+    if (!rise && !set) result[ye > 0 ? 'alwaysUp' : 'alwaysDown'] = true;
+
+    return result;
+};
+
+
+// export as Node module / AMD module / browser variable
+if (typeof exports === 'object' && typeof module !== 'undefined') module.exports = SunCalc;
+else if (typeof define === 'function' && define.amd) define(SunCalc);
+else window.SunCalc = SunCalc;
+
+}());
+
+
+// Weather data is separate from saved trip choices and checklists.
+(()=>{
+const dates=['2026-11-30','2026-12-01','2026-12-02','2026-12-03'];
+const labels=['抵達・泡湯','購物／嵐山','和服・清水寺','京都・返家'];
+const dateFmt=new Intl.DateTimeFormat('zh-TW',{timeZone:'Asia/Tokyo',month:'numeric',day:'numeric',weekday:'short'});
+const timeFmt=new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Tokyo',hour:'2-digit',minute:'2-digit',hour12:false});
+const todayJST=()=>new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+const status=document.getElementById('weather-status'),button=document.getElementById('weather-refresh');
+const nodes=dates.map((date,i)=>{
+ const day=new Date(date+'T12:00:00+09:00'),sun=SunCalc.getTimes(day,35.0116,135.7681);
+ const card=el('article','weather-day'),header=el('div','weather-date');header.append(el('h3','',Number(date.slice(5,7))+'／'+Number(date.slice(8,10))),el('p','',dateFmt.format(day).match(/（.*）/)?.[0]+' · '+labels[i]));
+ const body=el('div','weather-details'),condition=el('p','weather-condition','預報查詢中'),temp=el('p','weather-temp','—'),rain=el('p','weather-rain','降雨機率 —');
+ const light=el('div','weather-sun');[['日出',sun.sunrise],['日落',sun.sunset]].forEach(([label,value])=>{const row=el('span');row.append(el('span','',label),el('strong','','約 '+timeFmt.format(value)));light.append(row);});
+ body.append(condition,temp,rain,light);card.append(header,body);document.getElementById('weather-days').append(card);
+ const link=el('a','weather-mini','☀ 查看 '+dateFmt.format(day)+' 天氣與日出日落');link.href='#weather';document.querySelector('#panel-'+i+' .day-banner p:last-child').after(link);
+ return {date,condition,temp,rain};
+});
+const describe=code=>{
+ if(!Number.isInteger(code))return '天氣資料未提供';
+ if(code===0)return '☀ 晴朗';if(code<=2)return '🌤 晴時多雲';if(code===3)return '☁ 陰天';
+ if([45,48].includes(code))return '霧';if([51,53,55].includes(code))return '毛毛雨';if([56,57,66,67].includes(code))return '凍雨';
+ if([61,63,65].includes(code))return '🌧 下雨';if([71,73,75,77].includes(code))return '❄ 降雪';
+ if([80,81,82].includes(code))return '🌦 陣雨';if([85,86].includes(code))return '❄ 陣雪';if([95,96,99].includes(code))return '⛈ 雷雨';return '天氣資料未提供';
+};
+const degrees=v=>Number.isFinite(v)?Math.round(v)+'°C':'—';
+async function refresh(){
+ button.disabled=true;status.textContent='正在更新京都天氣…';
+ const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),12000);
+ try{
+  const params=new URLSearchParams({latitude:'35.0116',longitude:'135.7681',current:'temperature_2m,apparent_temperature,weather_code',daily:'weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max',timezone:'Asia/Tokyo',forecast_days:'16'});
+  const res=await fetch('https://api.open-meteo.com/v1/forecast?'+params,{signal:controller.signal,cache:'no-store'});if(!res.ok)throw new Error('weather unavailable');
+  const data=await res.json();if(!Array.isArray(data.daily?.time)||!data.daily.time.length)throw new Error('invalid forecast');
+  const current=data.current;
+  document.getElementById('weather-now').textContent=current?degrees(current.temperature_2m)+' · '+describe(current.weather_code):'目前氣溫暫無資料';
+  document.getElementById('weather-now-time').textContent=current?.time?'資料時間 '+current.time.replace('T',' ')+'（日本）・體感 '+degrees(current.apparent_temperature)+'・氣象模式估計':'目前天氣資料未提供';
+  const daily=data.daily,today=todayJST();let count=0;
+  nodes.forEach(n=>{
+   const index=daily.time.indexOf(n.date);n.temp.textContent='—';n.rain.textContent='降雨機率 —';
+   if(n.date<today){n.condition.textContent='日期已過';n.rain.textContent='此處不提供歷史天氣';return;}
+   if(index===-1){n.condition.textContent=n.date>daily.time[daily.time.length-1]?'尚未開放預報':'暫無預報資料';return;}
+   n.condition.textContent=describe(daily.weather_code?.[index]);
+   n.temp.textContent=degrees(daily.temperature_2m_min?.[index])+' – '+degrees(daily.temperature_2m_max?.[index]);
+   const probability=daily.precipitation_probability_max?.[index];n.rain.textContent='最高降雨機率 '+(Number.isFinite(probability)?probability+'%':'未提供');count++;
+  });
+  const stamp=new Intl.DateTimeFormat('zh-TW',{timeZone:'Asia/Tokyo',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false}).format(new Date());
+  status.textContent='查詢於 '+stamp+'（日本）｜預報目前涵蓋 '+daily.time[0]+'～'+daily.time[daily.time.length-1]+'。'+(count<4?'未涵蓋的旅遊日期，請接近出發時重新開啟或更新。':'四天預報已可查看，氣溫為每日最低～最高。');
+ }catch(error){
+  document.getElementById('weather-now').textContent='天氣暫時無法讀取';document.getElementById('weather-now-time').textContent='請確認網路連線後重試。';
+  nodes.forEach(n=>{n.condition.textContent=n.date<todayJST()?'日期已過':'暫時無法讀取預報';n.temp.textContent='—';n.rain.textContent='降雨機率 —';});
+  status.textContent='天氣連線未成功，請稍後按「更新天氣」。日出日落仍可查看；這不代表晴天或沒有降雨。';
+ }finally{clearTimeout(timeout);button.disabled=false;}
+}
+button.addEventListener('click',refresh);refresh();
+})();
+
 </script>
 </body>
 </html>
